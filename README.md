@@ -10,21 +10,6 @@ This project contains an Ansible playbook to automate the deployment and configu
 ## Setup
 
 ### 1. Install Ansible:
-```bash
-sudo apt update
-sudo apt install ansible
-# LAMP Stack Deployment with Ansible
-
-This project contains an Ansible playbook to automate the deployment and configuration of a LAMP stack (Linux, Apache, MySQL, PHP) on multiple servers.
-
-## Features
-- **Apache**: Installs Apache and deploys a sample PHP file.
-- **MySQL**: Installs and secures MySQL with a root password.
-- **PHP**: Installs PHP and configures Apache to process PHP files.
-
-## Setup
-
-### 1. Install Ansible:
 
 -sudo apt update
 -sudo apt install ansible
