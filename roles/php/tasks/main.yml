@@ -1,0 +1,13 @@
+---
+- name: Install PHP
+  apt:
+    name: php libapache2-mod-php
+    state: present
+
+- name: Restart Apache after PHP installation
+  service:
+    name: apache2
+    state: restarted
+  notify:
+    - restart apache
+

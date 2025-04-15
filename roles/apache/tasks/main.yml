@@ -1,0 +1,28 @@
+---
+- name: Install Apache
+  apt:
+    name: apache2
+    state: present
+
+- name: Start Apache
+  service:
+    name: apache2
+    state: started
+    enabled: true
+
+- name: Deploy sample index.php
+  copy:
+    content: |
+      <?php
+      phpinfo();
+      ?>
+    dest: /var/www/html/index.php
+    mode: '0644'
+
+- name: Restart Apache after config change
+  service:
+    name: apache2
+    state: restarted
+  notify:
+    - restart apache
+
